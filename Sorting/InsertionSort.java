@@ -1,29 +1,51 @@
-package tutorial1.Sorting;
+package Sorting;
 
-import java.util.*;
- 
-class InsertionSort {
-   public static void printArray(int arr[]) {
-       for(int i=0; i<arr.length; i++) {
-           System.out.print(arr[i]+" ");
-       }
-       System.out.println();
-   }
- 
-   public static void main(String args[]) {
-       int arr[] = {7, 8, 1, 3, 2};
- 
-       //insertion sort
-       for(int i=1; i<arr.length; i++) {
-           int current = arr[i];
-           int j = i - 1;
-               while(j >= 0 && arr[j] > current) {
-                   //Keep swapping
-                   arr[j+1] = arr[j];
-                   j--;
-               }
-           arr[j+1] = current;
-       }
-       printArray(arr);
+public class InsertionSort {
+    // Time complexity is O(n).
+    public static void insertionSort(int[] array) {
+        int n = array.length;
+        for (int i = 1; i < n; i++) {
+            int key = array[i];
+            int j = i - 1;
+            while (j >= 0 && array[j] > key) {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+            array[j + 1] = key;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] array = { 11, 12, 22, 25, 34, 64, 90 };
+        insertionSort(array);
+        System.out.println("Sorted array:");
+        for (int element : array) {
+            System.out.print(element + " ");
+        }
     }
 }
+
+// public class InsertionSort {
+// //Worst case time complexity is O(n^2)
+// public static void insertionSort(int[] array) {
+// int n = array.length;
+// for (int i = 1; i < n; i++) {
+// int key = array[i];
+// int j = i - 1;
+// while (j >= 0 && array[j] > key) {
+// array[j + 1] = array[j];
+// j = j - 1;
+// }
+// array[j + 1] = key;
+// }
+// }
+
+// public static void main(String[] args) {
+// int[] array = {90, 64, 34, 25, 22, 12, 11};
+// insertionSort(array);
+// System.out.println("Sorted array:");
+// for (int element : array) {
+// System.out.print(element + " ");
+// }
+// }
+// }
