@@ -1,9 +1,13 @@
-package tutorial1.Backtracking;
+package Backtracking;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class NQueens {
 
     public static List<List<String>> solveNQueens(int n) {
-        List<List<String>> result = new Arraylist<>();
+        List<List<String>> result = new ArrayList<>();
         char[][] board = new char[n][n];
         for (int i = 0; i < n; i++) {
             Arrays.fill(board[i], '.');
