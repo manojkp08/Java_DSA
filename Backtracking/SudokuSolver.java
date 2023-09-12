@@ -1,4 +1,4 @@
-package tutorial1.Backtracking;
+package Backtracking;
 
 public class SudokuSolver {
     public static boolean solveSudoku(char[][] board) {
