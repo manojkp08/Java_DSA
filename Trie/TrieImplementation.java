@@ -65,7 +65,7 @@ class Trie {
         return root.search(word);
     }
 
-    public boolean startsWith(String prefix) {
+    public boolean startsWith() {
         return root.startsWith(prefix);
     }
 
