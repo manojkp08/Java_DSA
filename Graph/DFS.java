@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -33,7 +34,8 @@ public class DFS {
             System.out.print(source + " ");
 
             // Get all adjacent vertices of the popped vertex
-            // If an adjacent vertex is not visited, mark it visited and push it onto the stack
+            // If an adjacent vertex is not visited, mark it visited and push it onto the
+            // stack
             for (Integer neighbor : adj.get(source)) {
                 if (!visited[neighbor]) {
                     visited[neighbor] = true;
@@ -65,9 +67,10 @@ public class DFS {
         graph.addEdge(4, 6);
 
         System.out.println("DFS traversal starting from vertex 0:");
-        graph.DFS(0);
+        graph.DFSsource(0);
 
         System.out.println("\nDFS traversal starting from all unvisited vertices:");
-        graph.DFS();
+        graph.DFSnosource();
     }
+
 }
