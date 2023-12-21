@@ -1,4 +1,4 @@
-package tutorial1.Recursion;
+package Recursion_Basic;
 
 public class recursion7 {
     private static int output;
