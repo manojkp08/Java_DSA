@@ -1,5 +1,7 @@
 package Patterns;
 
+import java.util.*;
+
 //making a diamond using stars and spaces.
 public class diamond {
     public static void main(String[] args) {
