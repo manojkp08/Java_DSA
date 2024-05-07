@@ -1,4 +1,5 @@
 package PLA;
+import java.util.Scanner;
 
 public class MaximumProductSubarray {
     public static int maxProduct(int[] nums) {
@@ -16,7 +17,14 @@ public class MaximumProductSubarray {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 2, 3, -2, 4 };
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int[] arr = new int[n];
+
+        for(int i=0; i<n; i++){
+            arr[i] = input.nextInt();
+        }
+
         System.out.println(maxProduct(arr));
     }
 }
